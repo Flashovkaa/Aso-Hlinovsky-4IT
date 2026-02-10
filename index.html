@@ -8,57 +8,76 @@
 </head>
 <body>
 
-<!-- NAVBAR -->
 <nav>
     <div class="logo">FH</div>
     <ul>
         <li><a href="#about">O mně</a></li>
-        <li><a href="#skills">Co umím</a></li>
-        <li><a href="#hobby">Co mě baví</a></li>
-        <li><a href="#future">Cíl</a></li>
+        <li><a href="#skills">Dovednosti</a></li>
+        <li><a href="#hobby">Zájmy</a></li>
+        <li><a href="#future">Budoucnost</a></li>
     </ul>
 </nav>
 
-<!-- HERO -->
 <header class="hero">
     <h1 class="fade">František Hlinovský</h1>
-    <p class="fade delay">Student IT • Programátor • Designer</p>
-    <a href="#about" class="btn fade delay2">Poznej mě</a>
+    <p class="fade delay">Student IT • Programování • Grafika • Video</p>
+    <a href="#about" class="btn fade delay2">Zjistit více</a>
 </header>
 
-<!-- O MNE -->
 <section id="about" class="reveal">
     <h2>👨‍💻 O mně</h2>
     <div class="card">
-        Jmenuji se František Hlinovský, je mi 19 let a studuji na střední škole. 
-        Zajímám se o technologie a neustále se rozvíjím v oblasti IT.
+        <p>
+        Jmenuji se František Hlinovský, je mi 19 let a studuji na střední škole se zaměřením na IT. 
+        V oblasti informačních technologií se aktivně rozvíjím a snažím se získávat nové zkušenosti 
+        jak v programování, tak v digitální tvorbě.
+        </p>
+        <p>
+        Rád pracuji na vlastních projektech, zkouším nové technologie a učím se věci, 
+        které mi pomohou v budoucí kariéře v IT odvětví.
+        </p>
     </div>
 </section>
 
-<!-- SKILLS -->
 <section id="skills" class="reveal">
     <h2>🚀 Co umím</h2>
-    <div class="grid">
-        <div class="card">💻 Programování</div>
-        <div class="card">🎨 Grafika</div>
-        <div class="card">🎬 Edit videí</div>
-        <div class="card">🌐 Web design</div>
-    </div>
-</section>
-
-<!-- HOBBY -->
-<section id="hobby" class="reveal">
-    <h2>🎮 Co mě baví</h2>
     <div class="card">
-        Technologie, programování, design, editování videí a tvorba digitálních projektů.
+        <p>
+        Mezi mé hlavní dovednosti patří programování, tvorba webových stránek a práce s grafikou. 
+        Dokážu vytvářet moderní webové projekty a pracovat s digitálním obsahem.
+        </p>
+        <p>
+        Zároveň se neustále učím nové technologie a zlepšuji své schopnosti v oblasti IT, 
+        abych byl připraven na budoucí práci v technologickém odvětví.
+        </p>
     </div>
 </section>
 
-<!-- FUTURE -->
+<section id="hobby" class="reveal">
+    <h2>🎨 Co mě baví</h2>
+    <div class="card">
+        <p>
+        Ve volném čase se věnuji programování, grafickému designu a editaci videí. 
+        Baví mě tvořit digitální obsah a experimentovat s novými nástroji a technologiemi.
+        </p>
+        <p>
+        Technologie mě baví nejen jako studium, ale i jako koníček, kterému se věnuji 
+        i mimo školu.
+        </p>
+    </div>
+</section>
+
 <section id="future" class="reveal">
     <h2>📈 Kam směřuji</h2>
     <div class="card">
-        Chci pracovat v IT odvětví jako programátor nebo designer a podílet se na moderních projektech.
+        <p>
+        Do budoucna chci pracovat v IT odvětví jako programátor nebo designer. 
+        Mým cílem je podílet se na zajímavých projektech, zlepšovat své schopnosti 
+        a získávat nové zkušenosti v oblasti moderních technologií.
+        </p>
+        <p>
+        Chci se neustále posouvat vpřed a budovat si kariéru v technologickém světě.
+        </p>
     </div>
 </section>
 
@@ -67,15 +86,12 @@
 </footer>
 
 <script>
-// fade při scrollu
 const reveals = document.querySelectorAll(".reveal");
-
 window.addEventListener("scroll", () => {
   for (let i = 0; i < reveals.length; i++) {
     let windowHeight = window.innerHeight;
     let revealTop = reveals[i].getBoundingClientRect().top;
     let revealPoint = 100;
-
     if (revealTop < windowHeight - revealPoint) {
       reveals[i].classList.add("active");
     }
