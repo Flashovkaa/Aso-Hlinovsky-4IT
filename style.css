@@ -19,7 +19,7 @@ nav{
     display:flex;
     justify-content:space-between;
     align-items:center;
-    padding:12px 40px;
+    padding:12px 20px;
     background:rgba(0,0,0,0.6);
     backdrop-filter: blur(10px);
     z-index:1000;
@@ -28,16 +28,18 @@ nav{
 nav ul{
     display:flex;
     list-style:none;
+    flex-wrap:wrap;
 }
 
 nav ul li{
-    margin-left:25px;
+    margin-left:15px;
 }
 
 nav a{
     color:white;
     text-decoration:none;
     font-weight:bold;
+    font-size:14px;
     transition:0.3s;
 }
 
@@ -46,25 +48,25 @@ nav a:hover{
 }
 
 .logo{
-    font-size:22px;
+    font-size:20px;
     font-weight:bold;
     color:#38bdf8;
 }
 
-/* HERO menší */
+/* HERO */
 .hero{
-    height:70vh;
+    min-height:70vh;
     display:flex;
     flex-direction:column;
     justify-content:center;
     align-items:center;
     background:linear-gradient(135deg,#020617,#0f172a);
     text-align:center;
-    padding:20px;
+    padding:100px 15px 40px 15px;
 }
 
 .hero h1{
-    font-size:55px;
+    font-size:40px;
     background:linear-gradient(90deg,#38bdf8,#a78bfa);
     -webkit-background-clip:text;
     color:transparent;
@@ -72,36 +74,37 @@ nav a:hover{
 
 .hero p{
     margin-top:10px;
-    font-size:18px;
+    font-size:16px;
     color:#cbd5e1;
 }
 
 .btn{
-    margin-top:25px;
-    padding:12px 30px;
+    margin-top:20px;
+    padding:12px 25px;
     border-radius:30px;
     background:linear-gradient(90deg,#38bdf8,#818cf8);
     text-decoration:none;
     color:white;
     font-weight:bold;
     transition:0.3s;
+    font-size:14px;
 }
 
 .btn:hover{
-    transform:scale(1.07);
-    box-shadow:0 0 20px #38bdf8;
+    transform:scale(1.05);
+    box-shadow:0 0 15px #38bdf8;
 }
 
-/* SEKCE BLÍŽ U SEBE */
+/* SECTIONS */
 section{
-    padding:50px 20px;
-    max-width:850px;
+    padding:50px 15px;
+    max-width:900px;
     margin:auto;
     text-align:center;
 }
 
 h2{
-    font-size:30px;
+    font-size:26px;
     margin-bottom:15px;
     color:#38bdf8;
 }
@@ -109,26 +112,26 @@ h2{
 /* CARD */
 .card{
     background:#0f172a;
-    padding:25px;
-    border-radius:18px;
+    padding:20px;
+    border-radius:16px;
     margin:10px 0;
-    transition:0.4s;
-    box-shadow:0 0 25px rgba(0,0,0,0.6);
+    transition:0.3s;
+    box-shadow:0 0 20px rgba(0,0,0,0.6);
     line-height:1.6;
-    font-size:17px;
+    font-size:15px;
 }
 
 .card:hover{
     transform:translateY(-5px);
-    box-shadow:0 0 25px #38bdf8;
+    box-shadow:0 0 20px #38bdf8;
 }
 
 /* FOOTER */
 footer{
     text-align:center;
-    padding:30px;
+    padding:25px;
     color:#94a3b8;
-    margin-top:20px;
+    font-size:14px;
 }
 
 /* FADE */
@@ -162,7 +165,7 @@ footer{
 
 /* SCROLLBAR */
 ::-webkit-scrollbar{
-    width:8px;
+    width:6px;
 }
 ::-webkit-scrollbar-track{
     background:#020617;
@@ -170,4 +173,33 @@ footer{
 ::-webkit-scrollbar-thumb{
     background:#38bdf8;
     border-radius:10px;
+}
+
+/* 📱 EXTRA MOBILE */
+@media(max-width:600px){
+
+.hero h1{
+    font-size:32px;
+}
+
+.hero p{
+    font-size:14px;
+}
+
+nav{
+    padding:10px 15px;
+}
+
+nav a{
+    font-size:13px;
+}
+
+h2{
+    font-size:22px;
+}
+
+.card{
+    font-size:14px;
+    padding:18px;
+}
 }
