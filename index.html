@@ -8,39 +8,57 @@
 </head>
 <body>
 
-<header>
-    <h1>František Hlinovský</h1>
-    <p>Student IT | Budoucí vývojář & designer</p>
+<!-- NAVBAR -->
+<nav>
+    <div class="logo">FH</div>
+    <ul>
+        <li><a href="#about">O mně</a></li>
+        <li><a href="#skills">Co umím</a></li>
+        <li><a href="#hobby">Co mě baví</a></li>
+        <li><a href="#future">Cíl</a></li>
+    </ul>
+</nav>
+
+<!-- HERO -->
+<header class="hero">
+    <h1 class="fade">František Hlinovský</h1>
+    <p class="fade delay">Student IT • Programátor • Designer</p>
+    <a href="#about" class="btn fade delay2">Poznej mě</a>
 </header>
 
-<section>
-    <h2>O mně</h2>
+<!-- O MNE -->
+<section id="about" class="reveal">
+    <h2>👨‍💻 O mně</h2>
     <div class="card">
-        <p>Jmenuji se František Hlinovský, je mi 19 let a studuji na střední škole. 
-        Zajímám se o informační technologie a aktivně se rozvíjím v oblasti programování a digitální tvorby.</p>
+        Jmenuji se František Hlinovský, je mi 19 let a studuji na střední škole. 
+        Zajímám se o technologie a neustále se rozvíjím v oblasti IT.
     </div>
+</section>
 
-    <h2>Co umím</h2>
-    <div class="card">
-        <p>Umím programovat a tvořit grafický obsah. Pracuji s moderními technologiemi 
-        a neustále se učím nové věci v oblasti IT a designu.</p>
+<!-- SKILLS -->
+<section id="skills" class="reveal">
+    <h2>🚀 Co umím</h2>
+    <div class="grid">
+        <div class="card">💻 Programování</div>
+        <div class="card">🎨 Grafika</div>
+        <div class="card">🎬 Edit videí</div>
+        <div class="card">🌐 Web design</div>
     </div>
+</section>
 
-    <h2>Co mě baví</h2>
+<!-- HOBBY -->
+<section id="hobby" class="reveal">
+    <h2>🎮 Co mě baví</h2>
     <div class="card">
-        <p>Baví mě práce s technologiemi, programování, grafický design a editace videí. 
-        Rád tvořím digitální projekty a zlepšuji své dovednosti.</p>
+        Technologie, programování, design, editování videí a tvorba digitálních projektů.
     </div>
+</section>
 
-    <h2>Kam směřuji</h2>
+<!-- FUTURE -->
+<section id="future" class="reveal">
+    <h2>📈 Kam směřuji</h2>
     <div class="card">
-        <p>Do budoucna chci působit v IT odvětví jako programátor nebo designer 
-        a pracovat na zajímavých technologických projektech.</p>
-    </div>
-
-    <h2>Kontakt</h2>
-    <div class="card">
-        <p>hlinovsky.frantisek@zak.spspb.cz</p>
+        Chci pracovat v IT odvětví jako programátor nebo designer a podílet se na moderních projektech.
     </div>
 </section>
 
@@ -48,7 +66,22 @@
     © 2026 František Hlinovský
 </footer>
 
+<script>
+// fade při scrollu
+const reveals = document.querySelectorAll(".reveal");
+
+window.addEventListener("scroll", () => {
+  for (let i = 0; i < reveals.length; i++) {
+    let windowHeight = window.innerHeight;
+    let revealTop = reveals[i].getBoundingClientRect().top;
+    let revealPoint = 100;
+
+    if (revealTop < windowHeight - revealPoint) {
+      reveals[i].classList.add("active");
+    }
+  }
+});
+</script>
+
 </body>
 </html>
-
-
